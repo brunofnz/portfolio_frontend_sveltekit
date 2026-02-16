@@ -70,8 +70,54 @@
 </script>
 
 <svelte:head>
+  <!-- SEO basico -->
   <title>Bruno Fernandez - Full Stack Developer | NestJS, SvelteKit, React</title>
   <meta name="description" content="Desarrollador Full Stack con experiencia en NestJS, SvelteKit, React y Docker. Aplicaciones web y APIs en producción." />
+  <meta name="author" content="Bruno Ulises Fernandez" />
+  <meta name="keywords" content="desarrollador full stack, NestJS, SvelteKit, React, Node.js, Docker, PostgreSQL, Argentina, Chaco, Resistencia, developer, portfolio" />
+  <link rel="canonical" href="https://brunofernandez.dev" />
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brunofernandez.dev" />
+  <meta property="og:title" content="Bruno Fernandez - Full Stack Developer" />
+  <meta property="og:description" content="Desarrollador Full Stack con experiencia en NestJS, SvelteKit, React y Docker. Aplicaciones web y APIs en producción." />
+  <meta property="og:image" content="https://brunofernandez.dev/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bruno Fernandez - Full Stack Developer" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Bruno Fernandez Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bruno Fernandez - Full Stack Developer" />
+  <meta name="twitter:description" content="Desarrollador Full Stack con experiencia en NestJS, SvelteKit, React y Docker. Aplicaciones web y APIs en producción." />
+  <meta name="twitter:image" content="https://brunofernandez.dev/og-image.png" />
+  <meta name="twitter:image:alt" content="Bruno Fernandez - Full Stack Developer" />
+
+  <!-- JSON-LD Structured Data -->
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bruno Ulises Fernandez",
+    "jobTitle": "Desarrollador Full Stack",
+    "url": "https://brunofernandez.dev",
+    "image": "https://brunofernandez.dev/images/perfil.png",
+    "email": "brunofnz28@gmail.com",
+    "telephone": "+5493624519254",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Resistencia",
+      "addressRegion": "Chaco",
+      "addressCountry": "AR"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/bruno-fernandez-developer/",
+      "https://github.com/brunofnz"
+    ],
+    "knowsAbout": ["NestJS", "SvelteKit", "React", "Node.js", "Docker", "PostgreSQL", "TypeScript", "OpenAI", "Blockchain"]
+  })}</script>`}
 </svelte:head>
 
 <svelte:window onmousemove={handleMouseMove} />
