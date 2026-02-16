@@ -17,11 +17,11 @@
     <!-- Main intro -->
     <div class="liquid-glass-card p-5 sm:p-8 card-3d hover-lift mb-6 sm:mb-8 relative overflow-hidden">
       <p class="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
-        Soy un <strong class="text-white">Desarrollador Full-Stack</strong> con formación en
-        <strong class="text-white">Ingeniería en Sistemas</strong> (UTN) y background en
-        <strong class="text-white">Electrónica</strong>. Me especializo en crear soluciones web robustas
-        para los sectores <strong class="text-cyan-400">inmobiliario</strong> y <strong class="text-purple-400">fintech</strong>,
-        combinando buenas prácticas de desarrollo con metodologías ágiles.
+        <strong class="text-white">Desarrollador Full Stack</strong> con +{yearsOfExperience} años de experiencia
+        construyendo aplicaciones web y APIs en producción. Participo en todo el ciclo de vida
+        de los proyectos: desde la <strong class="text-cyan-400">definición técnica</strong> hasta el
+        <strong class="text-purple-400">deploy y mantenimiento</strong>. Me gusta resolver problemas
+        reales y entregar soluciones que funcionen.
       </p>
       <div class="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none transition-[left] duration-800 ease-out group-hover:left-full"></div>
     </div>
@@ -66,7 +66,7 @@
           <h3 class="text-base sm:text-lg font-bold text-white">Experiencia</h3>
         </div>
         <p class="text-white/70 text-xs sm:text-sm">{yearsOfExperience}+ años en desarrollo</p>
-        <p class="text-white/50 text-xs mt-1">Sector inmobiliario, fintech e IoT</p>
+        <p class="text-white/50 text-xs mt-1">Productos propios y clientes externos</p>
         <div class="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none transition-[left] duration-800 ease-out group-hover:left-full"></div>
       </div>
     </div>

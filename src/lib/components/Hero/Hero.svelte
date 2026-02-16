@@ -49,8 +49,8 @@
             </span>
           </h1>
           <p class="text-white/70 text-sm sm:text-base max-w-xl mb-4 leading-relaxed opacity-0 animate-[slide-up_0.6s_ease_forwards_0.3s] mx-auto lg:mx-0">
-            Desarrollador Full-Stack con <strong class="text-white">{yearsOfExperience}+ años de experiencia</strong> construyendo
-            aplicaciones web escalables. Especializado en SvelteKit, NestJS y arquitecturas modernas.
+            +<strong class="text-white">{yearsOfExperience} años</strong> construyendo aplicaciones web y APIs en producción.
+            Trabajo en todo el ciclo de desarrollo: desde la idea hasta el deploy y mantenimiento.
           </p>
 
           <!-- Stats mini inline -->

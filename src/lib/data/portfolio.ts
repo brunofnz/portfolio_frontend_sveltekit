@@ -8,50 +8,58 @@ import type { ContactInfo } from '$lib/components/Contact/types';
 export const yearsOfExperience = new Date().getFullYear() - 2022;
 
 export const skills: SkillCategory = {
-  frontend: ['SvelteKit', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
-  backend: ['NestJS', 'Node.js', 'Python', 'GraphQL', 'REST APIs'],
+  frontend: ['SvelteKit', 'React', 'TypeScript', 'Tailwind CSS'],
+  backend: ['NestJS', 'Node.js', 'Python', 'GraphQL'],
   ia: ['n8n'],
-  databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'ArangoDB'],
-  devops: ['Git', 'GitHub', 'Docker', 'Jest']
+  databases: ['PostgreSQL', 'MySQL', 'MongoDB'],
+  devops: ['Docker', 'Linux', 'Git']
 };
 
 export const experiences: Experience[] = [
   {
     period: 'Jun 2022 - Presente',
     duration: `+${new Date().getFullYear() - 2022} años`,
-    role: 'Desarrollador Full-Stack',
+    role: 'Desarrollador Full Stack',
     company: 'TOB Group Solutions',
-    description: 'Desarrollo de soluciones tecnológicas para el sector inmobiliario y fintech.',
+    description: 'Desarrollo de aplicaciones web y APIs para clientes externos y productos propios, participando en todo el ciclo: diseño técnico, desarrollo, deploy y mantenimiento.',
     achievements: [
       {
-        title: 'Plataforma de Tokenización de Activos Inmobiliarios',
-        description: 'Sistema para fraccionamiento digital de propiedades, permitiendo inversión accesible en bienes raíces.'
+        title: 'Plataforma de Tokenización Inmobiliaria',
+        description: 'Sistema de tokenización de activos digitales de inmuebles con certificación en blockchain.'
       },
       {
-        title: 'CRM Inmobiliario + Sitio Web',
-        description: 'Rediseño completo de plataforma de gestión de alquileres y ventas con mejoras en UX y SEO.'
+        title: 'CRM Inmobiliario',
+        description: 'Sistema integral de gestión de alquileres y ventas usado activamente por inmobiliarias en producción.'
       },
       {
-        title: 'Sistema de Turnos con Chatbot',
-        description: 'Automatización de reservas integrado con WhatsApp Business API y flujos n8n.'
+        title: 'Chatbot & Turnos Automatizados',
+        description: 'Sistema de atención automatizada y gestión de turnos integrado con WhatsApp Business API y n8n, eliminando coordinación manual.'
+      },
+      {
+        title: 'Sistema de Tickets',
+        description: 'Plataforma interna de seguimiento de incidencias y gestión de tareas para equipos operativos.'
+      },
+      {
+        title: 'Automatizaciones & Scraping',
+        description: 'Herramientas de automatización de procesos empresariales e integración con APIs de terceros y pasarelas de pago.'
       }
     ],
-    tech: ['SvelteKit', 'NestJS', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'n8n']
+    tech: ['NestJS', 'SvelteKit', 'React', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'Linux', 'n8n']
   },
   {
     period: 'Oct 2021 - Feb 2022',
     duration: '5 meses',
-    role: 'Desarrollador Full-Stack',
+    role: 'Desarrollador Full Stack',
     company: 'AirBits',
     type: 'Pasantía',
-    description: 'Desarrollo de aplicaciones IoT para monitoreo y control de datos en tiempo real.',
+    description: 'Desarrollo de aplicación de control y visualización de datos en tiempo real.',
     achievements: [
       {
         title: 'Dashboard de Monitoreo IoT',
         description: 'Aplicación web para visualización y control de sensores en tiempo real con gráficos interactivos.'
       }
     ],
-    tech: ['React', 'Bootstrap 5', 'ArangoDB', 'GraphQL']
+    tech: ['React', 'ArangoDB', 'GraphQL']
   }
 ];
 
@@ -76,32 +84,32 @@ export const education: Education[] = [
 
 export const featuredProjects: Project[] = [
   {
-    title: 'Sistema Hidropónico Automatizado',
-    category: 'IoT / Electrónica',
-    description: 'Sistema de cultivo automatizado con sensores de pH, temperatura y humedad. Control vía microcontrolador.',
-    tech: ['C++', 'Arduino', 'Sensores IoT']
+    title: 'Tokenización Inmobiliaria',
+    category: 'Blockchain / Fintech',
+    description: 'Plataforma de tokenización de activos digitales de inmuebles con certificación en blockchain y smart contracts.',
+    tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Blockchain']
   },
   {
-    title: 'Sistema de Gestión de Datos',
-    category: 'Base de Datos',
-    description: 'Comparativa de rendimiento entre bases relacionales (MySQL) y NoSQL (Cassandra) para grandes volúmenes.',
-    tech: ['MySQL', 'Cassandra', 'Python']
-  },
-  {
-    title: 'E-Commerce de Insumos',
+    title: 'CRM Inmobiliario',
     category: 'Web App',
-    description: 'Plataforma de ventas online con carrito, pasarela de pagos y panel de administración.',
-    tech: ['SvelteKit', 'Node.js', 'PostgreSQL']
+    description: 'Sistema integral de gestión de alquileres y ventas con panel administrativo, usado en producción por inmobiliarias.',
+    tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Docker']
+  },
+  {
+    title: 'Chatbot & Turnos',
+    category: 'Automatización',
+    description: 'Sistema de atención automatizada y gestión de turnos integrado con WhatsApp Business API que eliminó la coordinación manual.',
+    tech: ['NestJS', 'n8n', 'WhatsApp API', 'MongoDB']
   }
 ];
 
 export const stats = [
   { value: `${yearsOfExperience}+`, label: 'Años en desarrollo' },
   { value: '10+', label: 'Proyectos entregados' },
-  { value: '8+', label: 'Tecnologías' }
+  { value: '10+', label: 'Tecnologías' }
 ];
 
-export const learning = ['TypeScript Avanzado', 'Docker & CI/CD', 'Testing (Jest/Cypress)'];
+export const learning = ['Arquitectura de microservicios', 'CI/CD pipelines', 'Testing avanzado'];
 
 export const orbs: Orb[] = Array.from({ length: 6 }, (_, i) => ({
   id: i,

@@ -70,8 +70,8 @@
 </script>
 
 <svelte:head>
-  <title>Bruno Fernandez - Full-Stack Developer</title>
-  <meta name="description" content="Portfolio de Bruno Ulises Fernandez - Desarrollador Full-Stack" />
+  <title>Bruno Fernandez - Full Stack Developer | NestJS, SvelteKit, React</title>
+  <meta name="description" content="Desarrollador Full Stack con experiencia en NestJS, SvelteKit, React y Docker. Aplicaciones web y APIs en producción." />
 </svelte:head>
 
 <svelte:window onmousemove={handleMouseMove} />
