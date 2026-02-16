@@ -14,11 +14,18 @@
       </span>
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each projects as project, i}
         <div class="liquid-glass-card p-6 card-3d hover-lift group relative overflow-hidden">
           <div class="flex items-center justify-between mb-4">
             <span class="text-xs px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">{project.category}</span>
+            {#if project.url}
+              <a href={project.url} target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-cyan-400 transition-colors" title="Ver proyecto">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            {/if}
           </div>
           <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{project.title}</h3>
           <p class="text-white/60 text-sm mb-4 leading-relaxed">{project.description}</p>

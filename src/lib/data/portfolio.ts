@@ -10,8 +10,8 @@ export const yearsOfExperience = new Date().getFullYear() - 2022;
 export const skills: SkillCategory = {
   frontend: ['SvelteKit', 'React', 'TypeScript', 'Tailwind CSS'],
   backend: ['NestJS', 'Node.js', 'Python', 'GraphQL'],
-  ia: ['n8n'],
-  databases: ['PostgreSQL', 'MySQL', 'MongoDB'],
+  ia: ['n8n', 'OpenAI API', 'RAG / pgvector'],
+  databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'MinIO'],
   devops: ['Docker', 'Linux', 'Git']
 };
 
@@ -24,27 +24,31 @@ export const experiences: Experience[] = [
     description: 'Desarrollo de aplicaciones web y APIs para clientes externos y productos propios, participando en todo el ciclo: diseño técnico, desarrollo, deploy y mantenimiento.',
     achievements: [
       {
-        title: 'Plataforma de Tokenización Inmobiliaria',
-        description: 'Sistema de tokenización de activos digitales de inmuebles con certificación en blockchain.'
+        title: 'Tokenización Inmobiliaria + Certificación Blockchain',
+        description: 'Plataforma de tokenización de activos digitales de inmuebles y certificación de documentos en Ethereum.'
       },
       {
-        title: 'CRM Inmobiliario',
-        description: 'Sistema integral de gestión de alquileres y ventas usado activamente por inmobiliarias en producción.'
+        title: 'CRM Inmobiliario con Portal Público',
+        description: 'Sistema de gestión de alquileres y ventas con portal público de propiedades y panel administrativo.'
       },
       {
-        title: 'Chatbot & Turnos Automatizados',
-        description: 'Sistema de atención automatizada y gestión de turnos integrado con WhatsApp Business API y n8n, eliminando coordinación manual.'
+        title: 'Chatbot IA + Turnos Automatizados',
+        description: 'Chatbot en WhatsApp con n8n que responde consultas y agenda turnos automáticamente.'
       },
       {
-        title: 'Sistema de Tickets',
-        description: 'Plataforma interna de seguimiento de incidencias y gestión de tareas para equipos operativos.'
+        title: 'Chatbot RAG con IA',
+        description: 'Sistema de atención inteligente con OpenAI y búsqueda semántica usando pgvector en PostgreSQL.'
       },
       {
-        title: 'Automatizaciones & Scraping',
-        description: 'Herramientas de automatización de procesos empresariales e integración con APIs de terceros y pasarelas de pago.'
+        title: 'Scraping de Portales Inmobiliarios',
+        description: 'Extracción automatizada de datos de propiedades desde portales inmobiliarios para alimentar el CRM.'
+      },
+      {
+        title: 'Paneles Administrativos & Backoffice',
+        description: 'Múltiples paneles de gestión interna con sistema de tickets, seguimiento de tareas e incidencias.'
       }
     ],
-    tech: ['NestJS', 'SvelteKit', 'React', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'Linux', 'n8n']
+    tech: ['NestJS', 'SvelteKit', 'React', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'Linux', 'n8n', 'OpenAI', 'MinIO', 'Ethereum']
   },
   {
     period: 'Oct 2021 - Feb 2022',
@@ -86,20 +90,38 @@ export const featuredProjects: Project[] = [
   {
     title: 'Tokenización Inmobiliaria',
     category: 'Blockchain / Fintech',
-    description: 'Plataforma de tokenización de activos digitales de inmuebles con certificación en blockchain y smart contracts.',
-    tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Blockchain']
+    description: 'Plataforma de tokenización de activos digitales de inmuebles y certificación de documentos en Ethereum.',
+    tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Ethereum']
   },
   {
     title: 'CRM Inmobiliario',
     category: 'Web App',
-    description: 'Sistema integral de gestión de alquileres y ventas con panel administrativo, usado en producción por inmobiliarias.',
-    tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Docker']
+    description: 'Sistema de gestión de alquileres y ventas con portal público de propiedades y panel administrativo.',
+    tech: ['NestJS', 'SvelteKit', 'MySQL', 'MinIO']
   },
   {
-    title: 'Chatbot & Turnos',
+    title: 'Chatbot IA (RAG)',
+    category: 'Inteligencia Artificial',
+    description: 'Chatbot inteligente con búsqueda semántica usando OpenAI y pgvector para responder con contexto real.',
+    tech: ['NestJS', 'OpenAI', 'pgvector', 'PostgreSQL']
+  },
+  {
+    title: 'Chatbot WhatsApp & Turnos',
     category: 'Automatización',
-    description: 'Sistema de atención automatizada y gestión de turnos integrado con WhatsApp Business API que eliminó la coordinación manual.',
+    description: 'Bot en WhatsApp que responde consultas y agenda turnos de forma automática con flujos de n8n.',
     tech: ['NestJS', 'n8n', 'WhatsApp API', 'MongoDB']
+  },
+  {
+    title: 'Scraping Inmobiliario',
+    category: 'Data',
+    description: 'Extracción automatizada de propiedades desde portales inmobiliarios para alimentar el CRM.',
+    tech: ['Node.js', 'Python', 'PostgreSQL']
+  },
+  {
+    title: 'Sistema de Tickets',
+    category: 'Backoffice',
+    description: 'Plataforma de gestión de incidencias y seguimiento de tareas para equipos operativos.',
+    tech: ['NestJS', 'SvelteKit', 'PostgreSQL']
   }
 ];
 

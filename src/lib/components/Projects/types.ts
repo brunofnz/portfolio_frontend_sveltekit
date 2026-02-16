@@ -3,6 +3,7 @@ export interface Project {
   category: string;
   description: string;
   tech: string[];
+  url?: string;
 }
 
 export interface ProjectsProps {
