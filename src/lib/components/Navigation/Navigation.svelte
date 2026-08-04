@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import type { NavItem } from './types';
+  import { ThemeToggle } from '$lib/components/ThemeToggle';
 
   let mobileMenuOpen = $state(false);
+  let activeId = $state('inicio');
 
   const navItems: NavItem[] = [
     { label: 'Inicio', href: '#inicio' },
@@ -19,37 +22,60 @@
   function closeMobileMenu() {
     mobileMenuOpen = false;
   }
+
+  onMount(() => {
+    const sections = navItems
+      .map((item) => document.querySelector(item.href))
+      .filter((el): el is Element => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) activeId = entry.target.id;
+        }
+      },
+      { rootMargin: '-45% 0px -45% 0px' }
+    );
+    sections.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  });
 </script>
 
 <nav class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 py-3 sm:py-4">
   <div class="max-w-6xl mx-auto">
     <div class="liquid-glass px-4 sm:px-6 py-3 flex justify-between items-center">
-      <span class="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient">
+      <span class="text-lg sm:text-xl font-bold text-ink">
         BF
       </span>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex gap-6">
+      <div class="hidden md:flex items-center gap-6">
         {#each navItems as item}
           <a
             href={item.href}
-            class="nav-link text-sm text-white/70 hover:text-white transition-all duration-300 relative"
+            class="nav-link text-sm text-ink-faint hover:text-ink transition-all duration-300 relative"
+            class:active={activeId === item.href.slice(1)}
           >
             {item.label}
           </a>
         {/each}
+        <ThemeToggle />
       </div>
 
-      <!-- Mobile Hamburger Button -->
-      <button
-        class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 gap-1.5"
-        onclick={toggleMobileMenu}
-        aria-label="Menu"
-      >
-        <span class="w-5 h-0.5 bg-white rounded-full transition-all duration-300 {mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}"></span>
-        <span class="w-5 h-0.5 bg-white rounded-full transition-all duration-300 {mobileMenuOpen ? 'opacity-0' : ''}"></span>
-        <span class="w-5 h-0.5 bg-white rounded-full transition-all duration-300 {mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}"></span>
-      </button>
+      <!-- Mobile controls -->
+      <div class="md:hidden flex items-center gap-2">
+        <ThemeToggle />
+        <button
+          class="flex flex-col justify-center items-center w-10 h-10 rounded-md bg-veil border border-veil-border gap-1.5"
+          onclick={toggleMobileMenu}
+          aria-label="Menu"
+        >
+          <span class="w-5 h-0.5 bg-ink rounded-full transition-all duration-300 {mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}"></span>
+          <span class="w-5 h-0.5 bg-ink rounded-full transition-all duration-300 {mobileMenuOpen ? 'opacity-0' : ''}"></span>
+          <span class="w-5 h-0.5 bg-ink rounded-full transition-all duration-300 {mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}"></span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Menu -->
@@ -59,7 +85,7 @@
           {#each navItems as item}
             <a
               href={item.href}
-              class="block py-3 px-4 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+              class="block py-3 px-4 text-ink-soft hover:text-ink hover:bg-veil rounded-lg transition-all"
               onclick={closeMobileMenu}
             >
               {item.label}

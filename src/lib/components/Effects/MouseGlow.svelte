@@ -14,7 +14,7 @@
     width: 400px;
     height: 400px;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(10, 132, 255, 0.15) 0%, rgba(191, 90, 242, 0.1) 30%, transparent 70%);
+    background: radial-gradient(circle, rgba(var(--glow-rgb), 0.1) 0%, rgba(var(--glow-rgb), 0.05) 30%, transparent 70%);
     filter: blur(40px);
   "
 ></div>

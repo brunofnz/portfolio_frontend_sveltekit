@@ -25,27 +25,33 @@ export const experiences: Experience[] = [
     achievements: [
       {
         title: 'Tokenización Inmobiliaria + Certificación Blockchain',
-        description: 'Plataforma de tokenización de activos digitales de inmuebles y certificación de documentos en Ethereum.'
+        description: 'Plataforma de tokenización de activos digitales de inmuebles y certificación de documentos en Ethereum.',
+        category: 'Blockchain & Fintech'
       },
       {
         title: 'CRM Inmobiliario con Portal Público',
-        description: 'Sistema de gestión de alquileres y ventas con portal público de propiedades y panel administrativo.'
+        description: 'Sistema de gestión de alquileres y ventas con portal público de propiedades y panel administrativo.',
+        category: 'CRM & Backoffice'
       },
       {
         title: 'Chatbot IA + Turnos Automatizados',
-        description: 'Chatbot en WhatsApp con n8n que responde consultas y agenda turnos automáticamente.'
+        description: 'Chatbot en WhatsApp con n8n que responde consultas y agenda turnos automáticamente.',
+        category: 'IA & Automatización'
       },
       {
         title: 'Chatbot RAG con IA',
-        description: 'Sistema de atención inteligente con OpenAI y búsqueda semántica usando pgvector en PostgreSQL.'
+        description: 'Sistema de atención inteligente con OpenAI y búsqueda semántica usando pgvector en PostgreSQL.',
+        category: 'IA & Automatización'
       },
       {
         title: 'Scraping de Portales Inmobiliarios',
-        description: 'Extracción automatizada de datos de propiedades desde portales inmobiliarios para alimentar el CRM.'
+        description: 'Extracción automatizada de datos de propiedades desde portales inmobiliarios para alimentar el CRM.',
+        category: 'Datos'
       },
       {
         title: 'Paneles Administrativos & Backoffice',
-        description: 'Múltiples paneles de gestión interna con sistema de tickets, seguimiento de tareas e incidencias.'
+        description: 'Múltiples paneles de gestión interna con sistema de tickets, seguimiento de tareas e incidencias.',
+        category: 'CRM & Backoffice'
       }
     ],
     tech: ['NestJS', 'SvelteKit', 'React', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'Linux', 'n8n', 'OpenAI', 'MinIO', 'Ethereum']
@@ -89,37 +95,37 @@ export const education: Education[] = [
 export const featuredProjects: Project[] = [
   {
     title: 'Tokenización Inmobiliaria',
-    category: 'Blockchain / Fintech',
+    category: 'Blockchain & Fintech',
     description: 'Plataforma de tokenización de activos digitales de inmuebles y certificación de documentos en Ethereum.',
     tech: ['NestJS', 'SvelteKit', 'PostgreSQL', 'Ethereum']
   },
   {
     title: 'CRM Inmobiliario',
-    category: 'Web App',
+    category: 'CRM & Backoffice',
     description: 'Sistema de gestión de alquileres y ventas con portal público de propiedades y panel administrativo.',
     tech: ['NestJS', 'SvelteKit', 'MySQL', 'MinIO']
   },
   {
     title: 'Chatbot IA (RAG)',
-    category: 'Inteligencia Artificial',
+    category: 'IA & Automatización',
     description: 'Chatbot inteligente con búsqueda semántica usando OpenAI y pgvector para responder con contexto real.',
     tech: ['NestJS', 'OpenAI', 'pgvector', 'PostgreSQL']
   },
   {
     title: 'Chatbot WhatsApp & Turnos',
-    category: 'Automatización',
+    category: 'IA & Automatización',
     description: 'Bot en WhatsApp que responde consultas y agenda turnos de forma automática con flujos de n8n.',
     tech: ['NestJS', 'n8n', 'WhatsApp API', 'MongoDB']
   },
   {
     title: 'Scraping Inmobiliario',
-    category: 'Data',
+    category: 'Datos',
     description: 'Extracción automatizada de propiedades desde portales inmobiliarios para alimentar el CRM.',
     tech: ['Node.js', 'Python', 'PostgreSQL']
   },
   {
     title: 'Sistema de Tickets',
-    category: 'Backoffice',
+    category: 'CRM & Backoffice',
     description: 'Plataforma de gestión de incidencias y seguimiento de tareas para equipos operativos.',
     tech: ['NestJS', 'SvelteKit', 'PostgreSQL']
   }

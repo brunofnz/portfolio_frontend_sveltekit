@@ -1,6 +1,7 @@
 export interface Achievement {
   title: string;
   description: string;
+  category?: string;
 }
 
 export interface Experience {

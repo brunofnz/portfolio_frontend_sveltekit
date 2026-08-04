@@ -15,7 +15,7 @@
         height: {orb.size}px;
         left: {orb.x}%;
         top: {orb.y}%;
-        background: radial-gradient(circle, rgba(10, 132, 255, 0.4) 0%, rgba(191, 90, 242, 0.2) 50%, transparent 70%);
+        background: radial-gradient(circle, rgba(var(--glow-rgb), 0.25) 0%, rgba(var(--glow-rgb), 0.1) 50%, transparent 70%);
         animation-duration: {orb.duration}s;
         animation-delay: {orb.delay}s;
       "
@@ -27,7 +27,7 @@
 <div class="fixed inset-0 pointer-events-none">
   {#each Array(isMobile ? 10 : 30) as _, i}
     <div
-      class="absolute w-1 h-1 bg-white/30 rounded-full animate-particle"
+      class="absolute w-1 h-1 bg-ink-dim rounded-full animate-particle"
       style="
         left: {Math.random() * 100}%;
         top: {Math.random() * 100}%;
